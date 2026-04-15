@@ -51,7 +51,7 @@ import requests, os
 SKILLBOSS_API_KEY = os.environ["SKILLBOSS_API_KEY"]
 
 result = requests.post(
-    "https://api.heybossai.com/v1/pilot",
+    "https://api.skillboss.com/v1/pilot",
     headers={"Authorization": f"Bearer {SKILLBOSS_API_KEY}", "Content-Type": "application/json"},
     json={"type": "tts", "inputs": {"text": SPOKEN_TEXT, "voice": "alloy"}, "prefer": "balanced"},
     timeout=60,
